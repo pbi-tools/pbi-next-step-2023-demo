@@ -1,0 +1,94 @@
+{
+  "version": "0.13",
+  "deployments": {
+    "Sales": {
+      "mode": "Dataset",
+      "source": {
+        "type": "Folder",
+        "path": "./Sales"
+      },
+      "authentication": {
+        "type": "ServicePrincipal",
+        "tenantId": "pbidevmode.onmicrosoft.com",
+        "clientId": "f71087ed-6399-49b3-8989-324928ea6639",
+        "clientSecret": "%PBI_CLIENT_SECRET%"
+      },
+      "options": {
+        "refresh": {
+          "enabled": true,
+          "skipNewDataset": false,
+          "type": "Automatic",
+          "objects": {
+            "About": "Full"
+          },
+          "tracing": {
+            "enabled": true,
+            "logEvents": {
+              "filter": [
+                "*|ReadData|*"
+              ]
+            },
+            "summary": {
+              "events": [
+                "TabularRefresh"
+              ],
+              "objectTypes": [
+                "Partition"
+              ],
+              "outPath": "./artifacts/refresh-summary.csv",
+              "console": true
+            }
+          }
+        },
+        "dataset": {
+          "replaceParameters": true,
+          "deployEmbeddedReport": true
+        },
+        "report": {},
+        "sqlScripts": {},
+        "console": {}
+      },
+      "parameters": {
+        "[Version]": "1.0.0",
+        "WORKSPACE": "next-step-2",
+        "Environment": "{{ENVIRONMENT}}",
+        "[PBITOOLS_VERSION]": "{{PBITOOLS_VERSION}}",
+        "[GH-Branch]": "%GITHUB_REF_NAME%",
+        "[GH-RunId]": "%GITHUB_RUN_ID%",
+        "[GH-SHA]": "%GITHUB_SHA%"
+      },
+      "environments": {
+        "Development": {
+          "workspace": "{{WORKSPACE}}",
+          "displayName": "{{PBIXPROJ_FOLDER}} [DEV]",
+          "refresh": {
+            "objects": {}
+          },
+          "parameters": {
+            "Environment": "DEV"
+          }
+        },
+        "Staging": {
+          "workspace": "{{WORKSPACE}}",
+          "displayName": "{{PBIXPROJ_FOLDER}} [UAT]",
+          "refresh": {
+          },
+          "parameters": {
+            "Environment": "QUAL"
+          }
+        },
+        "Production": {
+          "disabled": false,
+          "workspace": "{{WORKSPACE}}",
+          "refresh": {
+            "skip": false,
+            "type": "Full"
+          },
+          "parameters": {
+            "Environment": "PROD"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<LinguisticSchema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Language="en-US" DynamicImprovement="Full" xmlns="http://schemas.microsoft.com/sqlserver/2016/01/linguisticschema">
+  <Entities>
+    <Entity Name="Sales" ConceptualEntity="Pod6" Source="Generated">
+      <Words>
+        <Word>Sales</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Sales_Geo" ConceptualEntity="Pod" Source="Generated">
+      <Words>
+        <Word>Sales Geo</Word>
+      </Words>
+    </Entity>
+  </Entities>
+</LinguisticSchema>

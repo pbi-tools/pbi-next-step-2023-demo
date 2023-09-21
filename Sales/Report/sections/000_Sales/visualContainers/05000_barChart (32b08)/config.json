@@ -1,0 +1,133 @@
+{
+  "name": "32b08d7f32cb5f9816cc",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 521.03023516237408,
+        "y": 207.83874580067189,
+        "z": 5000,
+        "width": 313.19148936170211,
+        "height": 272.34042553191489,
+        "tabOrder": 5000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1860,
+        "width": 324,
+        "height": 420
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "barChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Measure Table.Sales Amount"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "Product.Brand",
+          "active": true
+        },
+        {
+          "queryRef": "Product.Product"
+        }
+      ],
+      "Series": [
+        {
+          "queryRef": "Customer.Gender"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        },
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        },
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount"
+          },
+          "Name": "Measure Table.Sales Amount"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Product"
+          },
+          "Name": "Product.Product"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Brand"
+          },
+          "Name": "Product.Brand"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Gender"
+          },
+          "Name": "Customer.Gender"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "s"
+                }
+              },
+              "Property": "Sales Amount"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

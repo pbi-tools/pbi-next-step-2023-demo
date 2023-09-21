@@ -1,0 +1,163 @@
+{
+  "objects": {},
+  "projectionOrdering": {
+    "X": [
+      0
+    ],
+    "Series": [
+      1
+    ],
+    "Y": [
+      2
+    ],
+    "Size": [
+      3
+    ]
+  },
+  "projectionActiveItems": {
+    "X": [
+      {
+        "queryRef": "Calendar.Month",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Month",
+        "Name": "Calendar.Month",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Store",
+        "Name": "Store.Store",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Sales Amount",
+        "Name": "Sales.Sales Amount",
+        "Type": 1
+      },
+      {
+        "Restatement": "# Customers (with Sales)",
+        "Name": "Sales.# Customers (with Sales)",
+        "Type": 3
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "X",
+          "Projection": 0,
+          "isActive": true
+        },
+        {
+          "Name": "Series",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Size",
+          "Projection": 3,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Month",
+      "queryName": "Calendar.Month",
+      "roles": {
+        "X": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendar"
+            }
+          },
+          "Property": "Month"
+        }
+      }
+    },
+    {
+      "displayName": "Store",
+      "queryName": "Store.Store",
+      "roles": {
+        "Series": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Store"
+            }
+          },
+          "Property": "Store"
+        }
+      }
+    },
+    {
+      "displayName": "Sales Amount",
+      "queryName": "Sales.Sales Amount",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 258
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Sales"
+            }
+          },
+          "Property": "Sales Amount"
+        }
+      }
+    },
+    {
+      "displayName": "# Customers (with Sales)",
+      "queryName": "Sales.# Customers (with Sales)",
+      "roles": {
+        "Size": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Sales"
+            }
+          },
+          "Property": "# Customers (with Sales)"
+        }
+      }
+    }
+  ]
+}

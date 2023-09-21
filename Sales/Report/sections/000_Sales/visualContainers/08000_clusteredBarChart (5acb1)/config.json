@@ -1,0 +1,140 @@
+{
+  "name": "5acb1caf298449a8acb4",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 32,
+        "y": 208,
+        "z": 8000,
+        "width": 480,
+        "height": 272,
+        "tabOrder": 8000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1500,
+        "width": 324,
+        "height": 300
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "clusteredBarChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Measure Table.Sales Amount"
+        },
+        {
+          "queryRef": "Measure Table.Sales Amount (ly)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "Product.Category",
+          "active": true
+        },
+        {
+          "queryRef": "Product.Subcategory"
+        },
+        {
+          "queryRef": "Product.Product"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        },
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount"
+          },
+          "Name": "Measure Table.Sales Amount"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount (LY)"
+          },
+          "Name": "Measure Table.Sales Amount (ly)"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Category"
+          },
+          "Name": "Product.Category"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Subcategory"
+          },
+          "Name": "Product.Subcategory"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Product"
+          },
+          "Name": "Product.Product"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "s"
+                }
+              },
+              "Property": "Sales Amount"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

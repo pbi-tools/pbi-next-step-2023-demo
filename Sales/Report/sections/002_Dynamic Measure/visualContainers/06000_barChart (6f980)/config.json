@@ -1,0 +1,104 @@
+{
+  "name": "6f9803040a3195450ea1",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 32.2508398656215,
+        "y": 416.39417693169094,
+        "z": 6000,
+        "width": 672.25083986562151,
+        "height": 289.54087346024636,
+        "tabOrder": 6000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "barChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Product.Category"
+        },
+        {
+          "queryRef": "Product.Product",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Dynamic Measure.Value"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "Dynamic Measure",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Product"
+          },
+          "Name": "Product.Product"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Value"
+          },
+          "Name": "Dynamic Measure.Value"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Category"
+          },
+          "Name": "Product.Category"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "Value"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

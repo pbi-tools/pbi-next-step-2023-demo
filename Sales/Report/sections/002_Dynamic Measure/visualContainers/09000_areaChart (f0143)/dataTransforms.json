@@ -1,0 +1,95 @@
+{
+  "objects": {},
+  "projectionOrdering": {
+    "Category": [
+      1
+    ],
+    "Y": [
+      0
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "Calendar.Month Start Date",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Value (ytd)",
+        "Name": "Dynamic Measure.Value (ytd)",
+        "Type": 1
+      },
+      {
+        "Restatement": "Month Start Date",
+        "Name": "Calendar.Month Start Date",
+        "Type": 4,
+        "Format": "yyyy\\-MMM"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Category",
+          "Projection": 1,
+          "isActive": true
+        },
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Value (ytd)",
+      "queryName": "Dynamic Measure.Value (ytd)",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dynamic Measure"
+            }
+          },
+          "Property": "Value (ytd)"
+        }
+      }
+    },
+    {
+      "displayName": "Month Start Date",
+      "format": "yyyy\\-MMM",
+      "queryName": "Calendar.Month Start Date",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 519
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendar"
+            }
+          },
+          "Property": "Month Start Date"
+        }
+      }
+    }
+  ]
+}

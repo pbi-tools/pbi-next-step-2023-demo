@@ -1,0 +1,129 @@
+{
+  "name": "4b18758374093c2e23fb",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 784.053751399776,
+        "y": 495.94624860022395,
+        "z": 7000,
+        "width": 463.69540873460249,
+        "height": 212.8555431131019,
+        "tabOrder": 7000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "scatterChart",
+    "projections": {
+      "X": [
+        {
+          "queryRef": "Calendar.Month",
+          "active": true
+        }
+      ],
+      "Series": [
+        {
+          "queryRef": "Store.Store"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sales.Sales Amount"
+        }
+      ],
+      "Size": [
+        {
+          "queryRef": "Sales.# Customers (with Sales)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c",
+          "Entity": "Calendar",
+          "Type": 0
+        },
+        {
+          "Name": "s1",
+          "Entity": "Store",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Month"
+          },
+          "Name": "Calendar.Month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s1"
+              }
+            },
+            "Property": "Store"
+          },
+          "Name": "Store.Store"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount"
+          },
+          "Name": "Sales.Sales Amount"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "# Customers (with Sales)"
+          },
+          "Name": "Sales.# Customers (with Sales)"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "s1"
+                }
+              },
+              "Property": "Store"
+            }
+          }
+        }
+      ]
+    },
+    "queryOptions": {
+      "keepProjectionOrder": true
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

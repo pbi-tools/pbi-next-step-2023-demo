@@ -1,0 +1,103 @@
+{
+  "byExpr": [
+    {
+      "name": "Filterf99428c5489cc4e6747a",
+      "type": "Categorical",
+      "expression": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendar"
+            }
+          },
+          "Property": "Year"
+        }
+      },
+      "howCreated": 1
+    },
+    {
+      "name": "Filter78bda1908a0bd749d86a",
+      "type": "Categorical",
+      "filter": {
+        "Version": 2,
+        "From": [
+          {
+            "Name": "p",
+            "Entity": "Product",
+            "Type": 0
+          }
+        ],
+        "Where": [
+          {
+            "Condition": {
+              "In": {
+                "Expressions": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "p"
+                        }
+                      },
+                      "Property": "Category"
+                    }
+                  }
+                ],
+                "Values": [
+                  [
+                    {
+                      "Literal": {
+                        "Value": "'Audio'"
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "expression": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Product"
+            }
+          },
+          "Property": "Category"
+        }
+      },
+      "howCreated": 1
+    },
+    {
+      "name": "Filter9ce4dd28c25b24ab1603",
+      "type": "Categorical",
+      "expression": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Product"
+            }
+          },
+          "Property": "Subcategory"
+        }
+      },
+      "howCreated": 1
+    },
+    {
+      "name": "Filterfa59dace34a0d2b060c1",
+      "type": "Categorical",
+      "expression": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Store"
+            }
+          },
+          "Property": "Store"
+        }
+      },
+      "howCreated": 1
+    }
+  ]
+}

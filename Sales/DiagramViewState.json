@@ -1,0 +1,26 @@
+{
+  "Version": 0,
+  "Data": [
+    {
+      "TableKey": "Tables\\b2d274c5-dc9c-49e2-b35a-50ce1f99ea4a",
+      "Height": 150,
+      "Width": 200,
+      "Left": 1234.8840682202131,
+      "Top": 47.666666666666686
+    },
+    {
+      "TableKey": "Tables\\9eaa3654-c4d6-42e5-a057-348df1b3f460",
+      "Height": 150,
+      "Width": 200,
+      "Left": 828.98025765254647,
+      "Top": 0
+    },
+    {
+      "TableKey": "Tables\\aa94db2e-b430-40ab-8c9d-ed1d87d211a2",
+      "Height": 150,
+      "Width": 200,
+      "Left": 659.8076211353316,
+      "Top": 0
+    }
+  ]
+}

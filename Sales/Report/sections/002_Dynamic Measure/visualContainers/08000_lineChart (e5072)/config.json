@@ -1,0 +1,93 @@
+{
+  "name": "e50725a866c432900b35",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 728.7591240875912,
+        "y": 416.43378519290928,
+        "z": 8000,
+        "width": 525.881126173097,
+        "height": 289.63503649635032,
+        "tabOrder": 8000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "lineChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Calendar.Date",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Dynamic Measure.Value"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c1",
+          "Entity": "Calendar",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "Dynamic Measure",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Value"
+          },
+          "Name": "Dynamic Measure.Value"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c1"
+              }
+            },
+            "Property": "Date"
+          },
+          "Name": "Calendar.Date"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "c1"
+                }
+              },
+              "Property": "Date"
+            }
+          }
+        }
+      ]
+    },
+    "queryOptions": {
+      "keepProjectionOrder": true
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

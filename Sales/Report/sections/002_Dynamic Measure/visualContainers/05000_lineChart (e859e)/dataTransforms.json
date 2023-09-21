@@ -1,0 +1,161 @@
+{
+  "objects": {},
+  "projectionOrdering": {
+    "Category": [
+      3
+    ],
+    "Y": [
+      0,
+      1
+    ],
+    "Y2": [
+      2
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "Calendar.Month Start Date",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Value",
+        "Name": "Dynamic Measure.Value",
+        "Type": 1
+      },
+      {
+        "Restatement": "Value (ly)",
+        "Name": "Dynamic Measure.Value (ly)",
+        "Type": 1
+      },
+      {
+        "Restatement": "Value Daily Max",
+        "Name": "Dynamic Measure.Value Daily Max",
+        "Type": 1
+      },
+      {
+        "Restatement": "Month Start Date",
+        "Name": "Calendar.Month Start Date",
+        "Type": 4,
+        "Format": "yyyy\\-MMM"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Category",
+          "Projection": 3,
+          "isActive": true
+        },
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Y2",
+          "Projection": 2,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Value",
+      "queryName": "Dynamic Measure.Value",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dynamic Measure"
+            }
+          },
+          "Property": "Value"
+        }
+      }
+    },
+    {
+      "displayName": "Value (ly)",
+      "queryName": "Dynamic Measure.Value (ly)",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dynamic Measure"
+            }
+          },
+          "Property": "Value (ly)"
+        }
+      }
+    },
+    {
+      "displayName": "Value Daily Max",
+      "queryName": "Dynamic Measure.Value Daily Max",
+      "roles": {
+        "Y2": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dynamic Measure"
+            }
+          },
+          "Property": "Value Daily Max"
+        }
+      }
+    },
+    {
+      "displayName": "Month Start Date",
+      "format": "yyyy\\-MMM",
+      "queryName": "Calendar.Month Start Date",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 519
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendar"
+            }
+          },
+          "Property": "Month Start Date"
+        }
+      }
+    }
+  ]
+}

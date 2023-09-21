@@ -1,0 +1,123 @@
+{
+  "name": "e859ee4d7c5b10e836d6",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 31.419423692636073,
+        "y": 207.64140875133404,
+        "z": 5000,
+        "width": 672.102454642476,
+        "height": 191.24866595517608,
+        "tabOrder": 5000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "lineChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Calendar.Month Start Date",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Dynamic Measure.Value"
+        },
+        {
+          "queryRef": "Dynamic Measure.Value (ly)"
+        }
+      ],
+      "Y2": [
+        {
+          "queryRef": "Dynamic Measure.Value Daily Max"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c1",
+          "Entity": "Calendar",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "Dynamic Measure",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Value"
+          },
+          "Name": "Dynamic Measure.Value"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Value (ly)"
+          },
+          "Name": "Dynamic Measure.Value (ly)"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Value Daily Max"
+          },
+          "Name": "Dynamic Measure.Value Daily Max"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c1"
+              }
+            },
+            "Property": "Month Start Date"
+          },
+          "Name": "Calendar.Month Start Date"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "c1"
+                }
+              },
+              "Property": "Month Start Date"
+            }
+          }
+        }
+      ]
+    },
+    "queryOptions": {
+      "keepProjectionOrder": true
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

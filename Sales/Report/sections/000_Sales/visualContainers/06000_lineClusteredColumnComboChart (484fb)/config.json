@@ -1,0 +1,149 @@
+{
+  "name": "484fbdd73143c5bf71fa",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 32.2508398656215,
+        "y": 495.22956326987685,
+        "z": 6000,
+        "width": 742.48600223964172,
+        "height": 213.57222844344906,
+        "tabOrder": 6000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1200,
+        "width": 324,
+        "height": 240
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Sales.Sales Amount"
+        },
+        {
+          "queryRef": "Sales.Sales Amount (LY)"
+        },
+        {
+          "queryRef": "Sales.Margin"
+        }
+      ],
+      "Y2": [
+        {
+          "queryRef": "Sales.Sales Amount (12M average)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "Calendar.Date (Year-Month)",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        },
+        {
+          "Name": "c",
+          "Entity": "Calendar",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount"
+          },
+          "Name": "Sales.Sales Amount"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount (LY)"
+          },
+          "Name": "Sales.Sales Amount (LY)"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Sales Amount (12M average)"
+          },
+          "Name": "Sales.Sales Amount (12M average)",
+          "NativeReferenceName": "Sales Amount (12M average)"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Margin"
+          },
+          "Name": "Sales.Margin",
+          "NativeReferenceName": "Margin"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Date (Year-Month)"
+          },
+          "Name": "Calendar.Date (Year-Month)",
+          "NativeReferenceName": "Date (Year-Month)"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "c"
+                }
+              },
+              "Property": "Date (Year-Month)"
+            }
+          }
+        }
+      ]
+    },
+    "queryOptions": {
+      "keepProjectionOrder": true
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {},
+    "vcObjects": {}
+  }
+}

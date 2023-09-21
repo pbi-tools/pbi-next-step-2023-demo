@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Filter",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Calendar"
+          }
+        },
+        "Property": "Year"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1
+  }
+]

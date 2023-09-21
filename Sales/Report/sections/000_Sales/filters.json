@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Filterf99428c5489cc4e6747a",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Calendar"
+          }
+        },
+        "Property": "Year"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "requireSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ordinal": 0
+  },
+  {
+    "name": "Filter78bda1908a0bd749d86a",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Product"
+          }
+        },
+        "Property": "Category"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "objects": {},
+    "ordinal": 1
+  },
+  {
+    "name": "Filter9ce4dd28c25b24ab1603",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Product"
+          }
+        },
+        "Property": "Subcategory"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "ordinal": 2
+  },
+  {
+    "name": "Filterfa59dace34a0d2b060c1",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "Store"
+          }
+        },
+        "Property": "Store"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 1,
+    "ordinal": 3
+  }
+]

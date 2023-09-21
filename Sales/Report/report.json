@@ -1,0 +1,57 @@
+{
+  "id": 6199353,
+  "layoutOptimization": 1,
+  "pods": [
+    {
+      "boundSection": "ReportSection89a9619c7025093ade1c",
+      "config": "{}",
+      "name": "Pod6",
+      "parameters": "[{\"name\":\"Param_Filterf99428c5489cc4e6747a\",\"boundFilter\":\"Filterf99428c5489cc4e6747a\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendar\"}},\"Property\":\"Year\"}},\"isLegacySingleSelection\":true}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectiond90903559771e58905a1",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filterf99428c5489cc4e6747a\",\"boundFilter\":\"Filterf99428c5489cc4e6747a\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendar\"}},\"Property\":\"Year\"}},\"isLegacySingleSelection\":true}]",
+      "type": 1
+    }
+  ],
+  "reportId": 3146403,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Light4437032645752863.json",
+            "path": "Light4437032645752863.json",
+            "type": 201
+          },
+          {
+            "name": "_7abfc6c7-1a23-4b5f-bd8b-8dc472366284171093267.jpg",
+            "path": "_7abfc6c7-1a23-4b5f-bd8b-8dc472366284171093267.jpg",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "theme": "Light4437032645752863.json"
+}
