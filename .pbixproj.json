@@ -9,8 +9,8 @@
       },
       "authentication": {
         "type": "ServicePrincipal",
-        "tenantId": "pbidevmode.onmicrosoft.com",
-        "clientId": "f71087ed-6399-49b3-8989-324928ea6639",
+        "tenantId": "pbitools.org",
+        "clientId": "755af0f2-d699-4f35-8a76-c850a30dc1c9",
         "clientSecret": "%PBI_CLIENT_SECRET%"
       },
       "options": {
@@ -50,7 +50,7 @@
       },
       "parameters": {
         "[Version]": "1.0.0",
-        "WORKSPACE": "next-step-2",
+        "WORKSPACE": "dataMinds-2",
         "Environment": "{{ENVIRONMENT}}",
         "[PBITOOLS_VERSION]": "{{PBITOOLS_VERSION}}",
         "[GH-Branch]": "%GITHUB_REF_NAME%",
